@@ -1,18 +1,16 @@
-# 스터디 제목
+# 컴퓨터 네트워크 및 실습
 
-[공부 자료] - [자료명](링크) 
+[전공] "가천대 - 컴퓨터 네트워크 및 실습" 스터디
 
-> 해당 Repository는 스터디를 진행하면서 알게된 지식을 공유 및 정리하고,
+> 해당 Repository는 스터디를 진행하면서 알게된 지식을 공유 및 정리하고, <br>
 > 이해 안되는 부분을 질문하고 해결하는 공간입니다.
 
-> 강의 내용에 대한 실습은 각자의 Repository에서 진행하며 관련 코드를
+<br>
+
+> 강의 내용에 대한 실습은 각자의 Repository에서 진행하며 관련 코드를 <br>
 > 공유하고 싶은 경우 markdown 문법을 활용 혹은 개인 Repository를 링크하는 식으로 진행합니다.
 
-## 목표 (예시)
-
-<!--
-아래의 목표는 예시이며 자유롭게 변경하시면 됩니다.
--->
+## 목표
 
 - 자바 ORM 표준 JPA 프로그래밍 - 기본편 강의 수강
 - JPA의 대한 기본적인 배경과 개념 이해
@@ -20,30 +18,24 @@
 
 ## 스터디 참가자
 
-<!--
-아래의 표는 예시이며 마음대로 작성을 바꾸셔도 좋습니다.
--->
-
-> 인원: 6명
+> 인원: 5명
 
 <center>
 
-|![루카](https://avatars.githubusercontent.com/u/98688494?v=4)|![루카](https://avatars.githubusercontent.com/u/98688494?v=4)|![루카](https://avatars.githubusercontent.com/u/98688494?v=4)|![루카](https://avatars.githubusercontent.com/u/98688494?v=4)|![루카](https://avatars.githubusercontent.com/u/98688494?v=4)|![루카](https://avatars.githubusercontent.com/u/98688494?v=4)|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|[루카](https://github.com/luke0408)|[최선규](https://github.com/luke0408)|[감자](https://github.com/luke0408)|[예시](https://github.com/luke0408)|[참여자](https://github.com/luke0408)|[리스트](https://github.com/luke0408)|
+|![김나현](https://avatars.githubusercontent.com/u/101113025?v=4)|![심세원](https://avatars.githubusercontent.com/u/105415118?v=4)|![이재혁](https://avatars.githubusercontent.com/u/106726862?v=4)|![조혜원](https://avatars.githubusercontent.com/u/101498350?v=4)|![최선규](https://avatars.githubusercontent.com/u/98688494?v=4)|
+|:---:|:---:|:---:|:---:|:---:|
+|[김나현](https://github.com/nahy-512)|[심세원](https://github.com/ShimFFF)|[이재혁](https://github.com/hamgui-2022)|[조혜원](https://github.com/One-HyeWon)|[최선규](https://github.com/luke0408)|
 
 </center>
 
 ## 스터디 개요
 
-- 기간: 0000.00.00 ~ 0000.00.00 (0주)
-- 시간: "스터디 시간"
-- 장소: "스터디 장소"
+- 기간: 2023.09.11 ~
+- 시간: 매주 화요일 17:00 ~ 19:00
+- 장소: 가천대학교
 - 스터디 계획
-  - 0주차: 00.00(일)
-    - Topic 1. "주제명"
-    - Topic 2. "주제명"
-
+  - 1주차: 09.11(화)
+    - Chapter 1. Computer Networks와 Internet
 
 ## 스터디 방식
 
