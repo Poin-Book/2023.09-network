@@ -1,7 +1,3 @@
-# Network Performance
-
-> 작성자: 조헤원
-
 # 1.4 Network Performance
 
 **학습 목적**
@@ -14,15 +10,15 @@
 
 ### 목차
 
-1. [Understanding Performance](1%204%20Network%20Performance%20a3034754dca14213be65c6c57ded1002.md)
-2. [How do loss and delay occur?](1%204%20Network%20Performance%20a3034754dca14213be65c6c57ded1002.md)
-3. [Queueing Delay, Packet Loss](1%204%20Network%20Performance%20a3034754dca14213be65c6c57ded1002.md)
-4. **_[Four Sources of packet delay](1%204%20Network%20Performance%20a3034754dca14213be65c6c57ded1002.md)_**
-5. [Queueing Delay](1%204%20Network%20Performance%20a3034754dca14213be65c6c57ded1002.md)
-6. [“Real” internet delays and routes](1%204%20Network%20Performance%20a3034754dca14213be65c6c57ded1002.md)
-7. [Packet loss](1%204%20Network%20Performance%20a3034754dca14213be65c6c57ded1002.md)
-8. [Throughput](1%204%20Network%20Performance%20a3034754dca14213be65c6c57ded1002.md)
-9. [Tramsmission vs. Propagation delay](1%204%20Network%20Performance%20a3034754dca14213be65c6c57ded1002.md)
+1. Understanding Performance
+2. How do loss and delay occur?
+3. Queueing Delay, Packet Loss
+4. Four Sources of packet delay
+5. Queueing Delay
+6. “Real” internet delays and routes
+7. Packet loss
+8. Throughput
+9. Tramsmission vs. Propagation delay
 
 ---
 
@@ -35,7 +31,7 @@
   - 하드웨어의 경우, 프로세스가 얼마나 빠른가, 초당 몇 번의 연산을 할 수 있는가 (Hz 헤르츠)
   - 메모리 시스템의 경우, 얼마나 많은 용량을 얼마나 빠른 access time으로 메모리를 읽어오는가를 가지고 성능을 나타냄
 - **Network System** : 통신을 하기 위한 시스템
-  - 네트워크 시스템에서의 주된 성능 지표 4가지
+  - 네트워크 시스템에서의 주된 성능 지표3가지
     - **Delay : 지연시간**
       - Packet이 하나의 network를 가로지를 때 걸리는 시간
     - **Throughput : 처리율**
@@ -57,7 +53,7 @@
 
 ### 2. How do loss and delay occur?
 
-Pocket Switching의 핵심인 router에 대해 알아야 이해 가능
+Packet Switching의 핵심인 router에 대해 알아야 이해 가능
 
 **Router** → 전송 받은 data들을 목적지 (destination)까지 전달 → **Store + Forward**
 
@@ -256,3 +252,7 @@ loss (손실)과 Delay(지연)은 어떻게 발생하는가?
    - cars “propagate” at $100km/hr$ : 차량 한 대가 진행하는 속도→ **Propagation delay**
    - toll booth takes 12 sec to service car (bit transmission time) : 톨게이트에서 차량 한 대가 딱 넘어갈 때 12초 소요→ **Transmission delay**
    - 마지막 차량이 톨게이트를 통과하는 데에 120초 소요 → **Queueing delay**
+
+   - 전체 10개의 차량이 첫 번째 톨게이트를 통과할 때까지 걸리는 시간은 12\*10=120초이니, 120초 이후에 첫 톨게이트를 다 지나게 됨 → **Transmission delay**
+   - 시속 100km로 달리니까, 마지막 차량이 두 번째 톨게이트에 도착할 때까지 걸리는 시간은 1시간 = $100km / (100km/hr) = 1hr$ → **Propagation delay**
+   - 따라서 **62분** 후면, 두 번째 톨게이트에 도착
