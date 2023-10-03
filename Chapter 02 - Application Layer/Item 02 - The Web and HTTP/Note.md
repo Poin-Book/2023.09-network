@@ -34,16 +34,16 @@
 
 Web server와 Web hosts(client) 사이를 연결해주는 protocol
 
-************\*\*\*\*************HTTP에서 P가 이미 protocol을 의미하지만, HTTP Ptrotocol이라고 한 번 더 말해줄 수 있음************\*\*\*\*************
+**_HTTP에서 P가 이미 protocol을 의미하지만, HTTP Ptrotocol이라고 한 번 더 말해줄 수 있음_**
 
-**\*\*\***HT 즉, Hyper Text는 우수한 기능을 내포한 Text를 의미**\*\*\***
+**_HT 즉, Hyper Text는 우수한 기능을 내포한 Text를 의미_** <br/> <br/>
 
-**************\*\***************Client / Server**************\*\***************
+**Client / Server**
 
 - **Web Client** : HTTP protocol을 사용해 Web objects를 **request**하고, **receive**하는 browser(application), 그리고 받아온 Web objects를 **display**함
   ⇒ client가 항상 켜져 있는 server에 접속해서 request하고, server의 response를 receive함
 - **Web Server** : HTTP protocol을 사용해 Web objects를 **send**함 (**Response**)
-  ⇒ 항상 어딘가에 실행 되어 있음
+  ⇒ 항상 어딘가에 실행 되어 있음 <br/> <br/>
 
 **uses TCP**
 
@@ -69,7 +69,7 @@ Web server와 Web hosts(client) 사이를 연결해주는 protocol
 
    response는 protocol과 Response 메세지가 상단에 보내짐
 
-4. 모든 작업과 전송이 완료 되면 **TCP Connection closed**
+4. 모든 작업과 전송이 완료 되면 **TCP Connection closed** <br/> <br/>
 
 **_HTTP is stateless!!_**
 
@@ -81,13 +81,13 @@ Web server와 Web hosts(client) 사이를 연결해주는 protocol
 
 > **이러한 특성 덕에 연결을 맺을 때 발생하는 오버헤드가 줄어들고, 데이터를 빠르고 확실하게 처리할 수 있으며, 요청간의 상태를 공유하지 않으므로 확장성을 가짐**
 
-**********\*\*\***********이러한 특징을 갖게 된 이유는, 처음 HTTP는 단순히 HTML 문서만을 주고 받는 것이 목적의전부였기 때문에 최대한 단순하게 설계 되었기 때문이다**********\*\*\***********
+**_이러한 특징을 갖게 된 이유는, 처음 HTTP는 단순히 HTML 문서만을 주고 받는 것이 목적의전부였기 때문에 최대한 단순하게 설계 되었기 때문이다_**
 
-********************************************\*********************************************이젠 요청간의 상태가 유지되어야 할 필요가 있어졌지만, HTTP는 유지 할 수 없음. 하지만 우리는 페이지를 이동할 때마다 새롭게 로그인 한 적이 없는데, 이는 상태를 유지해주는 쿠키와 세션이 있기 때문!********************************************\*********************************************
+**_이젠 요청간의 상태가 유지되어야 할 필요가 있어졌지만, HTTP는 유지 할 수 없음. 하지만 우리는 페이지를 이동할 때마다 새롭게 로그인 한 적이 없는데, 이는 상태를 유지해주는 쿠키와 세션이 있기 때문!_** <br/> <br/> <br/>
 
-### 2. HTTP Connection
+### 2. HTTP Connection <Br/> <br/>
 
-URL : www.someSchool.edu/someDepartment/home.index
+URL : www.someSchool.edu/someDepartment/home.index <br/> <Br/>
 
 **1a.** HTTP client가 **TCP connection**을 통해 www.someSchool.edu의 port 80번에 있는 HTTP server에 연결함
 
@@ -101,7 +101,7 @@ URL : www.someSchool.edu/someDepartment/home.index
 
 ⇒ 여기 이 단계에서 home.index라는 html object가 전달됨
 
-4. HTTP server는 response가 끝났으므로, **TCP Connection을 closes**함
+**4.** HTTP server는 response가 끝났으므로, **TCP Connection을 closes**함
 
 **5.** HTTP client는 요청했던 html file이 담긴 **response message**를 받아서 html을diplay 함
 
@@ -113,13 +113,14 @@ ex) 1번째 이미지의 위치는 어디고 ~ TCP 연결 ~ 요청~ response ~ c
 
 2번째도 ~~
 
-⇒ Web browser 로딩에 걸리는 시간은 URL을 받아오는 시간 + 이미지 10개를 받아오는 시간
+⇒ Web browser 로딩에 걸리는 시간은 URL을 받아오는 시간 + 이미지 10개를 받아오는 시간 <Br/> <Br/> <br/>
 
-### 3. HTTP Connection : Response time (응답시간/소요시간)
+### 3. HTTP Connection : Response time (응답시간/소요시간) <br/> <Br/>
 
 client에서 특정 object를 요청하고, object 수신 완료까지 걸리는 시간 = **Response Time**
+<br/><br/>
 
-**************\*\***************RTT (Round-trip time)**************\*\***************
+**RTT (Round-trip time)**
 
 하나의 object를 보내고 응답 받는데 걸리는 시간을 RTT로 표현
 
@@ -135,6 +136,8 @@ HTTP response time :
 4. none-persistent HTTP response time = **2 RTT + file transmission time**
 
    ⇒ 비지속적인 HTTP 응답 시간 = 2 RTT + file의 마지막 bit를 받는데까지 걸리는 시간
+
+<br/>
 
 **HTTP issues**
 
@@ -175,7 +178,9 @@ HTTP response time :
 
 ⇒ 이러한 차이점과 기능은 웹 페이지 및 리소스 로딩 성능에 영향을 미침
 
-************************\*\*\*\*************************HTTP response Status Codes************************\*\*\*\*************************
+<br/>
+
+**HTTP response Status Codes**
 
 ![Untitled](2%202%20The%20Web%20and%20HTTP%20a4f3facde18e45df965fd9878816a0b0/Untitled%206.png)
 
@@ -204,7 +209,9 @@ client가 server에 request할 때, 이전에 어떤 request와 response가 있�
 
 이를 위해 Cookies 필요!
 
-************\*\*\*\*************User-Server State : Cookies************\*\*\*\*************
+<br/>
+
+**User-Server State : Cookies**
 
 4가지 구성요소
 
@@ -224,7 +231,7 @@ client가 server에 request할 때, 이전에 어떤 request와 response가 있�
 
    (사용자 호스트에 저장된 쿠키 파일 / 브라우저에 의해 관리됨)
 
-   client의 **web browser(host)**는 쿠키 파일을 **유지, 관리함**
+   client의 **web browser(host)** 는 쿠키 파일을 **유지, 관리함**
 
    알아서 다음 Request에서 이 쿠키 파일의 정보에서 사용하기 위함 (2번 요소)
 
@@ -271,7 +278,7 @@ data가 이동하는데 걸리는 시간이 크기 때문에 CPU 안에 memory �
 
    ![Untitled](2%202%20The%20Web%20and%20HTTP%20a4f3facde18e45df965fd9878816a0b0/Untitled%208.png)
 
-****************\*\*\*\*****************Web caches와 proxy server는 같은 개념!****************\*\*\*\*****************
+**Web caches와 proxy server는 같은 개념!**
 
 - **Web cache acts as both client and server**
 
@@ -279,22 +286,28 @@ data가 이동하는데 걸리는 시간이 크기 때문에 CPU 안에 memory �
 
   1. server에게 request 하기 때문에 client의 역할을 함
   2. server의 response를 저장해 뒀다가, client에게 반환하기 때문에 server 역할을 함
+     <br/>
 
 - **typically cache is installed by ISP**
 
   (일반적으로 웹 cache는 ISP(인터넷 서비스 제공자 /KT, SKT, 대학교, 기관)등에 의해 설치 되고, 중앙에서 관리됨)
 
+<br/>
+
 - **Why Web caching?**
   (Web caching의 목적?)
+
   1. **reduce response time for client request**
 
      사용자 관점 : response time을 파격적으로 줄일 수 있음
 
      - cache is closer to client ⇒ ISP 내에서 관리하기 때문에 cache는 client에 가까이 위치해 있음 ⇒ 요청에 빠르게 응답 가능
+       <br/>
 
   2. **reduce traffic on an institution’s access link**
 
      access link를 관리하는 기관의 traffic을 줄일 수 있음 ⇒ ISP에 많은 사람이 몰릴 수 도 있는데, 첫 번째만 origin으로 가고, 나머지는 내부 cache에서 처리
+     <br/>
 
   3. **Internet is dense with caches**
 
@@ -304,13 +317,16 @@ data가 이동하는데 걸리는 시간이 크기 때문에 CPU 안에 memory �
 
      ⇒ Internet (전체 network) 관점 : proxy server는 매우 일상적으로 퍼져있고, 촘촘히 설치 되어 있음 ⇒ 콘텐츠 제공자들이 더 효과적으로 콘텐츠를 전달 할 수 있고, 성능이 부족한 콘텐츠 제공자도 더 효과적으로 콘텐츠를 제공할 수 있게 됨
 
-### 2. **************\*\***************Conditional GET**************\*\***************
+### 2. **Conditional GET**
+
+<br/>
 
 cache 사용의 문제점 ⇒ **Data 순결성**
 
 첫 요청과 나중 요청 사이에 contents가 바뀌면 새로운 contents를 받지 못 함
 
 ⇒ HTTP Protocol에 특정 field를 둬서 contents 변경 여부 확인
+<Br/>
 
 > **목적 : cache version이 update 되었으면 object를 전송하지 않음**
 
